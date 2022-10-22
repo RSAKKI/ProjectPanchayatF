@@ -8,17 +8,12 @@ import { PanchayatserviceService } from '../panchayatservice.service';
 })
 export class UserwelcomeComponent implements OnInit {
 
-  constructor(private aci:PanchayatserviceService) {
+  constructor(private ali:PanchayatserviceService) {
 
-    aci.newsview().subscribe(()=>
-   {
-      this.datan.response
-   })
+    ali.newsview().subscribe((response)=>{this.data2=response})
    }
-
 
   ngOnInit(): void {
   }
-  datan:any=[]
-
+  data2:any=[]
 }

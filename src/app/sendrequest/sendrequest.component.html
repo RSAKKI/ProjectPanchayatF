@@ -4,9 +4,21 @@
         <div class="row g-3">
  <h2>UPLOAD REQUEST</h2>
  
- <form>    
-    <label for="" class="form-label">Request:</label>
-    <textarea class="form-control" style="height: 100px"></textarea>
+ <form #sendreport="ngForm" (ngSubmit)="Request()">    
+    
+    <label for="" class="form-label">Name:</label>
+    <input type="text" class="form-control" [(ngModel)]="data1.requestname" name="requestname">
+    <label for="" class="form-label">Voterid:</label>
+    <input type="text" class="form-control" [(ngModel)]="data1.vid" name="vid"><br>
+    <label for="" class="form-label">Select Facility:</label>
+    <select name="" id="" class="form-control" [(ngModel)]="data1.facilitytype" name="facilitytype">
+      <option value="Electricity">Electricity</option>
+      <option value="Water">Water</option>
+      <option value="Health">Health</option>
+    </select>
+    <br>
+    <label for="" class="form-label">Request:</label><br>
+    <textarea class="form-control" [(ngModel)]="data1.userequest" name="userequest"></textarea>
     
   <br>
   <button class="btn btn-warning">UPLOAD</button>

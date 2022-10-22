@@ -11,18 +11,22 @@ import { UserwelcomeComponent } from './userwelcome/userwelcome.component';
 import { UserdisplayComponent } from './userdisplay/userdisplay.component';
 import { AdminsignupComponent } from './adminsignup/adminsignup.component';
 import { SendrequestComponent } from './sendrequest/sendrequest.component';
+import { ViewrequestComponent } from './viewrequest/viewrequest.component';
+import { StatusdisplayComponent } from './statusdisplay/statusdisplay.component';
 
 const routes: Routes = [{path:"",component:FirstpageComponent},
 {path:'a',component:AboutComponent},
 {path:'ad',component:AdministratorComponent},
 {path:'u',component:UserhomeComponent},
-{path:'ur',component:UserwelcomeComponent},
 {path:'n',component:NotificationsComponent},
 {path:'aw',component:AdminwelcomeComponent},
 {path:'us',component:SignupComponent},
 {path:'ud',component:UserdisplayComponent},
 {path:'as',component:AdminsignupComponent},
-{path:'sq',component:SendrequestComponent}
+{path:'sq',component:SendrequestComponent},
+{path:'uw',component:UserwelcomeComponent},
+{path:'sd',component:StatusdisplayComponent},
+{path:'vr',component:ViewrequestComponent}
 ];
 
 @NgModule({

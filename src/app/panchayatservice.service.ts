@@ -13,6 +13,11 @@ export class PanchayatserviceService {
     return this.http.post<any>('http://localhost:3000/us',data)
 
   }
+  ulogin(data3:any){
+
+    return this.http.post<any>('http://localhost:3000/ulogin',data3)
+
+  }
 
   asignup(dataa:any){
 
@@ -20,9 +25,19 @@ export class PanchayatserviceService {
 
   }
 
+  alogin(data2:any){
+    return this.http.post<any>('http://localhost:3000/alogin',data2)
+  }
+    
   usernews(datan:any){
 
     return this.http.post<any>('http://localhost:3000/n',datan)
+
+  }
+
+  request(data1:any){
+
+    return this.http.post<any>('http://localhost:3000/sq',data1)
 
   }
   

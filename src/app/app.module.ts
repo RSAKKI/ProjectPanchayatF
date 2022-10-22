@@ -8,7 +8,6 @@ import { AdministratorComponent } from './administrator/administrator.component'
 import { SignupComponent } from './signup/signup.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { AboutComponent } from './about/about.component';
-import { UserwelcomeComponent } from './userwelcome/userwelcome.component';
 import { AdminwelcomeComponent } from './adminwelcome/adminwelcome.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotificationsComponent } from './notifications/notifications.component';
@@ -17,6 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserdisplayComponent } from './userdisplay/userdisplay.component';
 import { AdminsignupComponent } from './adminsignup/adminsignup.component';
 import { SendrequestComponent } from './sendrequest/sendrequest.component';
+import { UserwelcomeComponent } from './userwelcome/userwelcome.component';
+import { StatusdisplayComponent } from './statusdisplay/statusdisplay.component';
+import { ViewrequestComponent } from './viewrequest/viewrequest.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +28,15 @@ import { SendrequestComponent } from './sendrequest/sendrequest.component';
     SignupComponent,
     UserhomeComponent,
     AboutComponent,
-    UserwelcomeComponent,
     AdminwelcomeComponent,
     NavbarComponent,
     NotificationsComponent,
     UserdisplayComponent,
     AdminsignupComponent,
     SendrequestComponent,
+    UserwelcomeComponent,
+    StatusdisplayComponent,
+    ViewrequestComponent,
    
   ],
   imports: [

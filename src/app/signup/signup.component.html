@@ -6,9 +6,9 @@
             <form #register="ngForm" (ngSubmit)="Usignup()">
 <h3>USER SIGNUP</h3>
                <label for="" class="form-label">Name:</label>
-                <input type="text" class="form-control" [(ngModel)]="data.name" name="name"> 
+                <input type="text" class="form-control" [(ngModel)]="data.name" name="name" required> 
                 <label for="" class="form-label">Ward Name:</label>
-                <select name="" id="" class="form-control" [(ngModel)]="data.ward" name="ward">
+                <select name="" id="" class="form-control" [(ngModel)]="data.ward" name="ward" required>
                     <option value="SELECT">SELECT</option>
                     <option value="A">A</option>
                     <option value="B">B</option>
@@ -20,11 +20,11 @@
                     <option value="H">H</option>
                 </select>    
                 <label for="" class="form-label">Address:</label>
-                <textarea name="" id="" cols="30" rows="10" class="form-control" [(ngModel)]="data.address" name="address"></textarea>
+                <textarea name="" id="" cols="30" rows="10" class="form-control" [(ngModel)]="data.address" name="address" required></textarea>
                 <label for="" class="form-label">VoterId:</label>
-                <input type="text" class="form-control" [(ngModel)]="data.voterid" name="voterid">
+                <input type="text" class="form-control" [(ngModel)]="data.voterid" name="voterid" minlength="10" maxlength="10" required>
                 <label for="" class="form-label">Password:</label>
-                <input type="password" name="" id="" class="form-control" [(ngModel)]="data.password" name="password">
+                <input type="password" name="" id="" class="form-control" [(ngModel)]="data.password" name="password" minlength="8" maxlength="8" required>
                 <button class="btn btn-warning">REGISTER</button>
     </form>
     </div>

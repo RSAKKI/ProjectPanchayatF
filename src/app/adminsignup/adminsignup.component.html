@@ -14,7 +14,7 @@
              <textarea cols="30" rows="10" class="form-control" [(ngModel)]="data1.adminaddress" name="adminaddress"></textarea>
             
              <label for="" class="form-label">Voter's ID:</label>
-             <input type="text" class="form-control" [(ngModel)]="data1.adminvoterid" name="adminvoterid">
+             <input type="text" class="form-control" [(ngModel)]="data1.adminvoterid" name="adminvoterid" minlength="10" maxlength="10">
             
             
              <label for="" class="form-label">Position:</label>
@@ -22,7 +22,7 @@
             
             
              <label for="" class="form-label">Password:</label>
-             <input type="password" class="form-control" [(ngModel)]="data1.adminpassword" name="adminpassword">
+             <input type="password" class="form-control" [(ngModel)]="data1.adminpassword" name="adminpassword" minlength="8" maxlength="8">
             
            
              <button class="btn btn-warning">REGISTER</button>

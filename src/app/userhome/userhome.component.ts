@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PanchayatserviceService } from '../panchayatservice.service';
 
 @Component({
   selector: 'app-userhome',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserhomeComponent implements OnInit {
 
-  constructor() { }
+  data={
+
+    name:"",
+    password:""
+  }
+
+  constructor(private api:PanchayatserviceService, private router:Router) { }
 
   ngOnInit(): void {
   }
+  Ulogin(){
+
+    this.api.ulogin(this.data).subscribe((data)=>{
+      if(data.success===true){
+        this.router.navigate(['/uw'])
+      }
+      else {
+        alert(data.success)
+      }
+    })  
+
+  }
+
 
 }
