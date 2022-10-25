@@ -7,6 +7,20 @@ import { Injectable } from '@angular/core';
 export class PanchayatserviceService {
 
   constructor(private http:HttpClient ) {}
+
+  User:any
+
+  public Saveuser(data:any):any{
+
+    this.User=data
+    console.log("abc")
+  }
+
+  Retriveuser(){
+
+    console.log("123")
+    return this.User
+  }
   
   usignup(data:any){
 
@@ -39,6 +53,19 @@ export class PanchayatserviceService {
 
     return this.http.post<any>('http://localhost:3000/sq',data1)
 
+  }
+  Approve=(i:any)=>{
+    return this.http.put<any>('http://localhost:3000/approveview/'+i._id,i)
+  }
+
+  Deny=(i:any)=>{
+
+    return this.http.delete<any>('http://localhost:3000/deleteview/'+i._id)
+
+  }
+
+  requestview=()=>{
+    return this.http.get('http://localhost:3000/requestview')
   }
   
   userview=()=>{

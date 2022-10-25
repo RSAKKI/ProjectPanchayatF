@@ -23,6 +23,8 @@ export class UserhomeComponent implements OnInit {
 
     this.api.ulogin(this.data).subscribe((data)=>{
       if(data.success===true){
+        console.log(data)
+        this.api.Saveuser(data)
         this.router.navigate(['/uw'])
       }
       else {

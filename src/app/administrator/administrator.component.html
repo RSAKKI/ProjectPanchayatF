@@ -22,11 +22,11 @@
       <div class="row g-10">
           <form #adminlogin="ngForm" (ngSubmit)="Alogin()">
               <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                  
+                  <br>
                   <label for="" class="form label">USERNAME</label>
                   <input type="text" class="form-control" [(ngModel)]="data1.adminname" name="adminname">
                   <label for="" class="form label">PASSWORD</label>
-                  <input type="password" id="" class="form-control" [(ngModel)]="data1.adminpassword" name="adminpassword"><br><br>
+                  <input type="password" id="" class="form-control" [(ngModel)]="data1.adminpassword" name="adminpassword"><br>
                   <button class="btn btn-primary">SIGN IN</button>
               </div>
           </form>
