@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" >WELCOME USER</a>
+      <a class="navbar-brand" >WELCOME {{data3}}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -12,7 +12,7 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a routerLink="" class="nav-link active" aria-current="page">Logout</a>
+              <a routerLink="/u" class="nav-link active" aria-current="page">Logout</a>
             </li>
             <li class="nav-item">
               <a routerLink="/sq" class="nav-link">Facility Request</a>
@@ -33,11 +33,21 @@
             <br><h2 align="center"> LATEST UPDATES !</h2>
               <br>
               <ul><form>
-                <div class="card" style="width: 18rem;">
-                  <div class="card-body">
-                    <p class="card-text" style="text-align: left;" *ngFor="let j of data2">News:{{j.news}}</p>
-                  </div>
-                </div>
+               
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">News Headlines</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let i of data2">
+                      <td>{{i.news}}</td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
                </form>
               </ul>
               <br>
