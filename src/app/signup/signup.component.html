@@ -4,7 +4,11 @@
     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
         <div class="row g-3">
             <form #register="ngForm" (ngSubmit)="Usignup()">
-<h3>USER SIGNUP</h3>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><h3>USER SIGNUP</h3><a href="/aw">Go back</a></li>
+    </ol>
+</nav>
                <label for="" class="form-label">Name:</label>
                 <input type="text" class="form-control" [(ngModel)]="data.name" name="name" required> 
                 <label for="" class="form-label">Ward Name:</label>
@@ -25,8 +29,11 @@
                 <input type="text" class="form-control" [(ngModel)]="data.voterid" name="voterid" minlength="10" maxlength="10" required>
                 <label for="" class="form-label">Password:</label>
                 <input type="password" name="" id="" class="form-control" [(ngModel)]="data.password" name="password" minlength="8" maxlength="8" required>
-                <button class="btn btn-warning">REGISTER</button>
+               <br> <button class="btn btn-warning">REGISTER</button>
     </form>
+         
+      
+     
     </div>
 </div>
 </div>

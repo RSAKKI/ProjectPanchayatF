@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PanchayatserviceService } from '../panchayatservice.service';
 
 @Component({
   selector: 'app-adminwelcome',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminwelcomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api:PanchayatserviceService) {
+
+    
+    }
+   
 
   ngOnInit(): void {
   }

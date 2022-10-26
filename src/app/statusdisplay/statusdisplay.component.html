@@ -1,5 +1,10 @@
 <div>
-    <h2 align="center">Approved Requests !</h2><br>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <h3>REQUESTS STATUS !</h3><a href="/uw">Go back</a></li>
+    </ol>
+  </nav>
     <table class="table">
     <thead>
       <tr>
@@ -10,10 +15,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
+      <tr *ngFor="let i of data4">
+        <th scope="row">{{i.requestname}}</th>
+        <td>{{i.facilitytype}}</td>
+        <td>{{i.status}}</td>
       </tr>
      
     </tbody>

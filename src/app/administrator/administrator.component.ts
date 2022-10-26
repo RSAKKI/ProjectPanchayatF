@@ -24,6 +24,7 @@ export class AdministratorComponent implements OnInit {
 
     this.api.alogin(this.data1).subscribe((data1)=>{
       if(data1.success===true){
+        this.api.Saveadmin(data1)
         this.router.navigate(['/aw'])
       }
       else {
