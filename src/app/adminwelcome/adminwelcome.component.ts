@@ -9,12 +9,23 @@ import { PanchayatserviceService } from '../panchayatservice.service';
 export class AdminwelcomeComponent implements OnInit {
 
   constructor(private api:PanchayatserviceService) {
-
+   
+    this.data=this.api.Retriveadmin()
+    console.log(this.data)
+    if(this.data)
+    {
+      console.log(this.data)
+      console.log(this.data.data1.adminname)
+      this.data3=this.data.data1.adminname
+      console.log(this.data3)
+   }
     
     }
    
 
   ngOnInit(): void {
   }
+  data:any=[]
+  data3:any=[]
 
 }
