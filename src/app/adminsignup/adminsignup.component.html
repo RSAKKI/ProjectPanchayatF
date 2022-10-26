@@ -21,8 +21,11 @@
             
             
              <label for="" class="form-label">Position:</label>
-             <input type="text" class="form-control" [(ngModel)]="data1.adminposition" name="adminposition">
-            
+            <select name="" id="" class="form-control" [(ngModel)]="data1.adminposition" name="adminposition">
+              <option value="Electricity">President</option>
+              <option value="Water">Secretary</option>
+              <option value="Health">Staff</option>
+            </select>
             
              <label for="" class="form-label">Password:</label>
              <input type="password" class="form-control" [(ngModel)]="data1.adminpassword" name="adminpassword" minlength="8" maxlength="8">

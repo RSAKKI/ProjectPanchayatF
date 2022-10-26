@@ -35,7 +35,7 @@
                   <label for="" class="form label">USERNAME</label>
                   <input type="text" class="form-control" [(ngModel)]="data.name" name="name">
                   <label for="" class="form label">PASSWORD</label>
-                  <input type="password" id="" class="form-control" [(ngModel)]="data.password" name="password"><br>
+                  <input type="password" id="" class="form-control" [(ngModel)]="data.password" name="password" minlength="8" maxlength="8"><br>
                   <button  class="btn btn-primary">SIGN IN</button>
               </div>
           </form>

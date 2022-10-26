@@ -10,7 +10,7 @@
 </nav>
 <form #newsregister="ngForm" (ngSubmit)="Usernews()">
    <label for="" class="form-label">News:</label>
-   <textarea class="form-control" [(ngModel)]="datan.news" name="news"></textarea>
+   <textarea class="form-control" [(ngModel)]="datan.news" name="news" minlength="50" maxlength="50"></textarea>
    
  <br>
  <button class="btn btn-warning">UPLOAD</button>
