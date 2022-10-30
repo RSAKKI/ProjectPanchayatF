@@ -19,7 +19,22 @@ export class AdminsignupComponent implements OnInit {
   }
   constructor(private aki:PanchayatserviceService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
+(() => {
+  'use strict'
+
+  const forms = document.querySelectorAll('.needs-validation')
+  Array.prototype.slice.call(forms).forEach(form => {
+    form.addEventListener('submit',function(event:any){
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
   }
 
 Asignup(){

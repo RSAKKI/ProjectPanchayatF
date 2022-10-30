@@ -19,11 +19,27 @@ export class AdministratorComponent implements OnInit {
   constructor(private api:PanchayatserviceService, private router:Router) { }
 
   ngOnInit(): void {
+    (() => {
+      'use strict'
+    
+      const forms = document.querySelectorAll('.needs-validation')
+      Array.prototype.slice.call(forms).forEach(form => {
+        form.addEventListener('submit',function(event:any){
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+    
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
   }
   Alogin(){
 
     this.api.alogin(this.data1).subscribe((data1)=>{
       if(data1.success===true){
+        this.api.Saveadmin(data1)
         this.router.navigate(['/aw'])
       }
       else {

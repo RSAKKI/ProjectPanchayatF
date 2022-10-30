@@ -16,5 +16,16 @@ export class UserdisplayComponent implements OnInit {
   
   ngOnInit(): void {
   }
+  deleteuser(i:any){
+
+    this.asi.Deleteuser(i).subscribe(
+
+      (data)=>{
+
+        console.log(data)
+        window.location.reload()
+      }
+    )
+  }
   data:any=[]
 }
