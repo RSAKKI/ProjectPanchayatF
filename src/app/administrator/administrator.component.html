@@ -30,13 +30,24 @@
     </nav>
     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
       <div class="row g-10">
-          <form #adminlogin="ngForm" (ngSubmit)="Alogin()">
+          <form class="row g-3 needs-validation" novalidate #adminlogin="ngForm" (ngSubmit)="adminlogin.valid && Alogin()">
               <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                  <br>
-                  <label for="" class="form label">USERNAME</label>
-                  <input type="text" class="form-control" [(ngModel)]="data1.adminname" name="adminname">
-                  <label for="" class="form label">PASSWORD</label>
-                  <input type="password" id="" class="form-control" [(ngModel)]="data1.adminpassword" name="adminpassword" minlength="8" maxlength="8"><br>
+                 
+                  <div>
+                  <label for="validationCustomName" class="form label">USERNAME</label>
+                  <input id="validationCustomName" type="text" class="form-control" pattern="[A-Za-z ]+" [(ngModel)]="data1.adminname" name="adminname" minlength="5" maxlength="20" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid Username !
+                  </div>
+                </div>
+                <div>
+                  <label for="validationCustomPassword" class="form label">PASSWORD</label>
+                  <input type="password" id="validationCustomPassword" class="form-control" [(ngModel)]="data1.adminpassword" name="adminpassword" minlength="8" maxlength="8" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid Password !
+                  </div>
+                </div>
+                <br>
                   <button class="btn btn-primary">SIGN IN</button>
               </div>
           </form>

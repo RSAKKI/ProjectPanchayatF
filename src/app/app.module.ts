@@ -9,7 +9,6 @@ import { SignupComponent } from './signup/signup.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { AboutComponent } from './about/about.component';
 import { AdminwelcomeComponent } from './adminwelcome/adminwelcome.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,7 +28,6 @@ import { ViewrequestComponent } from './viewrequest/viewrequest.component';
     UserhomeComponent,
     AboutComponent,
     AdminwelcomeComponent,
-    NavbarComponent,
     NotificationsComponent,
     UserdisplayComponent,
     AdminsignupComponent,

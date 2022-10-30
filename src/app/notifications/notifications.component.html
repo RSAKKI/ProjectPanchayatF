@@ -8,10 +8,14 @@
       <li class="breadcrumb-item"><h3>UPLOAD NEWS</h3><a href="/aw">Go back</a></li>
   </ol>
 </nav>
-<form #newsregister="ngForm" (ngSubmit)="Usernews()">
-   <label for="" class="form-label">News:</label>
-   <textarea class="form-control" [(ngModel)]="datan.news" name="news" minlength="50" maxlength="50"></textarea>
-   
+<form class="row g-3 needs-validation" novalidate #newsregister="ngForm" (ngSubmit)="newsregister.valid && Usernews()">
+  <div>
+   <label for="validationCustomNews" class="form-label">News:</label>
+   <textarea id="validationCustomNews" class="form-control" [(ngModel)]="datan.news" name="news" minlength="10" maxlength="50" required></textarea>
+   <div class="invalid-feedback">
+    Please provide a valid News !
+  </div>
+  </div> 
  <br>
  <button class="btn btn-warning">UPLOAD</button>
 </form>
